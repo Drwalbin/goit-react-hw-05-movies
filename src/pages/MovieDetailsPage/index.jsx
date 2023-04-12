@@ -6,15 +6,15 @@ import {
   useLocation,
   useParams,
 } from 'react-router-dom';
-import { useDetails } from '../../utils/hooks/useDetails';
-import { Loader } from '../../components/Loader';
+import { useDetails } from 'utils/hooks/useDetails';
+import { Loader } from '../../components/Loader/index';
 import styles from './MovieDetailsPage.module.css';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const { movie } = useDetails(movieId);
   const location = useLocation();
-
+ 
   const backHref = location.state?.from ?? '/movies';
 
   if (!movie) return <Loader />;
@@ -41,7 +41,7 @@ const MovieDetailsPage = () => {
           <p className={styles.paragraph}>{movie.overview}</p>
           <h4 className={styles.genres}>Genres</h4>
           <p className={styles.paragraph}>
-            {movie.genres.map(genre => genre.name).join(',')}
+            {movie.genres.map(genre => genre.name).join(', ')}
           </p>
         </div>
       </div>
@@ -49,9 +49,10 @@ const MovieDetailsPage = () => {
         <p className={styles.paragraph}>Additional Information</p>
         <ul>
           <li className={styles.itemLink}>
-            <Link to="cast" className={styles.cast}>
-              Cast
-            </Link>
+            <Link to="cast">Cast</Link>
+          </li>
+          <li className={styles.itemLink}>
+            <Link to="reviews">Reviews</Link>
           </li>
         </ul>
       </div>

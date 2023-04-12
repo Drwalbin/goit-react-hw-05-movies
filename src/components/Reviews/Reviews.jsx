@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useReviews } from '../../utils/hooks/useReviews';
 import { Loader } from '../../components/Loader';
 
-export const Reviews = () => {
+  const Reviews = () => {
   const { movieId } = useParams();
   const { reviews } = useReviews(movieId);
 
@@ -29,3 +29,5 @@ export const Reviews = () => {
     </div>
   );
 };
+
+export default Reviews;
