@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/422.f33915de.chunk.css","mappings":"AAAA,sBAEE,sBAAuB,CADvB,iBAEF,CAEA,uBAEE,UAAY,CADZ,oBAEF","sources":["pages/HomePage/HomePage.module.css"],"sourcesContent":[".item {\n  margin-bottom: 5px;\n  list-style-type: number;\n}\n\n.title {\n  text-decoration: none;\n  color: black;\n}"],"names":[],"sourceRoot":""}
