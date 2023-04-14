@@ -1,8 +1,10 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useReviews } from '../../utils/hooks/useReviews';
 import { Loader } from '../../components/Loader';
+import ReactHtmlParser from 'react-html-parser';
 
-  const Reviews = () => {
+const Reviews = () => {
   const { movieId } = useParams();
   const { reviews } = useReviews(movieId);
 
@@ -21,7 +23,7 @@ import { Loader } from '../../components/Loader';
           return (
             <li key={review.author}>
               <h4>Author: {review.author}</h4>
-              <p>{review.content}</p>
+              <p>{ReactHtmlParser(review.content)}</p>
             </li>
           );
         })}
