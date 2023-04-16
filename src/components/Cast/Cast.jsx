@@ -8,6 +8,7 @@ const Cast = () => {
 
   if (!cast) return <Loader />;
 
+  
   return (
     <div>
       <ul>
