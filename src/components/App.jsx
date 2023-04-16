@@ -18,7 +18,10 @@ export const App = () => {
         <Route path="movies" element={<MoviesPage />} />
         <Route path="movies/:movieId" element={<MovieDetailsPage />}>
           <Route path="cast" element={<Cast />} />
-          <Route path="reviews" element={<Reviews />} />
+          <Route
+            path="reviews"
+            element={<Reviews key={new Date().getTime()} />}
+          />
         </Route>
       </Route>
       <Route path="*" element={<Page404 />} />
