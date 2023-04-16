@@ -6,7 +6,6 @@
 .link {
   display: inline-block;
   font-size: 15px;
-
 }
 
 .containerDetail {
@@ -30,6 +29,4 @@
 
 .itemLink {
     margin-bottom: 5px;
-      text-decoration: none;
-      color: black;
 }
